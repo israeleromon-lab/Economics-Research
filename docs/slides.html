@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation Slides - AI & Economics in Nigeria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .slide-container {
+            max-width: 900px;
+            margin: 4rem auto;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+        .slide {
+            background: white;
+            padding: 4rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .slide-title { color: var(--accent-color); margin-bottom: 2rem; border-bottom: 2px solid #f1f5f9; padding-bottom: 1rem; }
+        .slide p, .slide li { color: var(--text-secondary); font-size: 1.25rem; line-height: 1.8; margin-bottom: 1rem; }
+        .slide ul { padding-left: 2rem; }
+        .back-btn { display: inline-block; margin-top: 2rem; font-weight: bold; color: var(--accent-color); text-decoration: none; text-align: center; }
+        .back-btn:hover { text-decoration: underline; }
+    </style>
+</head>
+<body style="background-color: var(--bg-color);">
+    <div class="container">
+        <a href="index.html" class="back-btn" style="display:block;">&larr; Back to Home</a>
+        
+        <div class="slide-container">
+            
+            <!-- Slide 1 -->
+            <div class="slide fade-up">
+                <h1 style="text-align: center; margin-bottom: 1rem;">The Impact of AI on Economic Growth & Financial Inclusion in Nigeria</h1>
+                <p style="text-align: center; font-weight: bold; color: var(--text-primary);">A Macro-Level Analysis of Digital Readiness and SME Credit Access</p>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide fade-up">
+                <h2 class="slide-title">The Core Problem</h2>
+                <ul>
+                    <li><strong>SMEs Drive the Economy</strong>: SMEs account for ~50% of Nigeria's GDP and over 80% of employment.</li>
+                    <li><strong>The Credit Gap</strong>: Access to finance is the #1 obstacle for SME growth (SMEDAN).</li>
+                    <li><strong>The Traditional Barrier</strong>: Lack of collateral and formal credit history leaves millions "invisible" to traditional banks.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide fade-up">
+                <h2 class="slide-title">The AI Opportunity</h2>
+                <ul>
+                    <li><strong>Alternative Credit Scoring</strong>: Machine learning can use non-traditional data (mobile usage, utility payments) to assess credit risk.</li>
+                    <li><strong>The Prerequisite</strong>: Successful AI deployment requires robust digital readiness and foundational infrastructure (e.g., broadband).</li>
+                </ul>
+                <p style="margin-top: 2rem; padding: 1.5rem; background: #f8fafc; border-left: 4px solid var(--accent-color); font-weight: bold;">
+                    Question: Does an improvement in digital readiness actually correlate with better SME credit access in Nigeria?
+                </p>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide fade-up">
+                <h2 class="slide-title">Methodology & Data</h2>
+                <ul>
+                    <li><strong>Data Source</strong>: World Bank Open Data (historical time-series).</li>
+                    <li><strong>Proxies Used</strong>:
+                        <ul>
+                            <li><em>AI/Digital Readiness</em> = Fixed Broadband Subscriptions.</li>
+                            <li><em>SME Financial Inclusion</em> = Domestic Credit to Private Sector (% of GDP).</li>
+                            <li><em>Macroeconomic Impact</em> = Annual GDP Growth.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Analysis</strong>: Pearson Correlation Matrix.</li>
+                </ul>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide fade-up">
+                <h2 class="slide-title">Key Findings: The Data Speaks</h2>
+                <div style="display: flex; gap: 2rem; align-items: center;">
+                    <div style="flex: 1;">
+                        <h3>Digital Infrastructure Drives Inclusion</h3>
+                        <ul>
+                            <li>A <strong>moderate positive correlation (0.37)</strong> exists between broadband adoption and private sector credit access.</li>
+                            <li><strong>Takeaway</strong>: Better tech foundations allow financial systems to serve more SMEs.</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1; text-align: center;">
+                        <img src="assets/correlation_heatmap.png" alt="Correlation Heatmap" style="max-width: 100%; border-radius: 8px;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="slide fade-up">
+                <h2 class="slide-title">Key Findings: The Macro Disconnect</h2>
+                <h3>The GDP Lag Effect</h3>
+                <ul>
+                    <li>A slightly negative correlation (-0.13) exists between short-term GDP growth and digital readiness.</li>
+                    <li><strong>Why?</strong>
+                        <ul>
+                            <li>Nigeria's GDP remains highly susceptible to volatile oil prices.</li>
+                            <li>Tech adoption yields productivity gains with a "lag effect," not instantaneous macroeconomic surges.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Slide 7 -->
+            <div class="slide fade-up">
+                <h2 class="slide-title">Policy Recommendations</h2>
+                <ol>
+                    <li><strong>Accelerate Foundational Infrastructure</strong>: Expand broadband beyond Lagos and Abuja to ensure equitable AI access.</li>
+                    <li><strong>Promote AI in FinTech</strong>: The CBN should create "sandbox" environments for FinTechs utilizing AI for alternative credit scoring.</li>
+                    <li><strong>Develop Ethical AI Frameworks</strong>: Implement localized guidelines to prevent algorithmic bias against rural or marginalized populations.</li>
+                </ol>
+            </div>
+
+            <!-- Slide 8 -->
+            <div class="slide fade-up">
+                <h1 style="text-align: center; color: var(--accent-color);">Thank You</h1>
+                <p style="text-align: center; font-weight: bold;">Questions & Discussion</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
