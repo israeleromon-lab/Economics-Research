@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Economics Research | Nigeria</title>
+    <meta name="description" content="Analyzing the impact of digital infrastructure on SME credit access and economic growth in Nigeria.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="switchView('home')">AI & Econ.</div>
+            <div class="nav-links">
+                <a href="#" onclick="switchView('home')">Overview</a>
+                <a href="#" onclick="switchView('paper')">Full Paper</a>
+                <a href="#" onclick="switchView('slides')">Slide Deck</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- VIEWS CONTAINER -->
+    <main id="app-container">
+
+        <!-- ==================== HOME VIEW ==================== -->
+        <div id="home-view" class="view active">
+            <header class="hero">
+                <div class="glow-orb orb-1"></div>
+                <div class="glow-orb orb-2"></div>
+                <div class="container hero-content">
+                    <h1 class="fade-up">The Impact of AI on Economic Growth & Financial Inclusion in Nigeria</h1>
+                    <p class="subtitle fade-up delay-1">Looking at how digital infrastructure actually affects SME lending and the broader economy.</p>
+                    <div class="hero-actions fade-up delay-2">
+                        <button class="btn btn-primary" onclick="switchView('paper')">Read the Full Paper</button>
+                        <button class="btn btn-secondary" onclick="switchView('slides')">View the Slide Deck</button>
+                    </div>
+                    
+                    <div class="hero-image-wrapper fade-up delay-3">
+                        <div class="glass-panel">
+                            <img src="assets/ai_economics_hero.png" alt="Abstract AI and Economics Visualization">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="overview">
+                <div class="container">
+                    <div class="grid-2">
+                        <div class="fade-in scroll-element">
+                            <h2 class="section-title">The Credit Gap</h2>
+                            <p>SMEs account for roughly 50% of Nigeria's GDP and over 80% of employment. Yet, a massive chunk of these businesses struggle to access traditional bank loans due to a lack of collateral and formal credit history.</p>
+                        </div>
+                        <div class="fade-in scroll-element delay-1">
+                            <h2 class="section-title">The AI Solution</h2>
+                            <p>FinTechs are stepping in using machine learning to analyze alternative data—such as mobile top-ups and utility bills—to instantly assess credit risk and bypass the traditional banking bottlenecks.</p>
+                        </div>
+                    </div>
+
+                    <div class="data-highlight glass-panel fade-in scroll-element" style="margin-top: 4rem;">
+                        <h2 class="section-title text-center">Empirical Data Insight</h2>
+                        <div class="grid-2" style="align-items: center; margin-top: 2rem;">
+                            <div>
+                                <h3 style="color: var(--text-primary); font-family: 'Outfit', sans-serif;">Better Internet = More Loans</h3>
+                                <p>Our analysis of World Bank data reveals a <strong>moderate positive correlation (0.37)</strong> between broadband subscriptions and domestic credit to the private sector.</p>
+                                <p>This indicates that as Nigeria's digital foundation strengthens, financial systems are better equipped to serve "invisible" SMEs.</p>
+                            </div>
+                            <div>
+                                <img src="assets/correlation_heatmap.png" alt="Correlation Heatmap" style="width: 100%; border-radius: 8px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==================== PAPER VIEW ==================== -->
+        <div id="paper-view" class="view">
+            <div class="container">
+                <div class="document-container fade-up">
+                    <button class="back-link" onclick="switchView('home')">&larr; Back to Overview</button>
+                    
+                    <h1 class="doc-title">AI and Economic Growth in Nigeria: An Empirical Look at SME Credit</h1>
+
+                    <h2>1. Introduction</h2>
+                    <p>Nigeria is Africa's largest economy, but despite the top-line GDP growth over the last twenty years, getting that wealth to actually spread around is still a huge problem. A massive chunk of the adult population doesn't use formal banking. Small and Medium Enterprises (SMEs) are the backbone of the economy—making up over 80% of jobs and about half the GDP—yet they struggle constantly to get loans. Banks usually blame this on high costs and the fact that most of these small businesses don't have collateral or a formal credit history.</p>
+                    <p>Lately, Artificial Intelligence (AI) and machine learning are starting to change how this works. Instead of needing a traditional credit score, FinTech companies are using AI models to look at alternative data: things like mobile phone top-ups, utility bills, and digital payment histories. This lets them figure out if someone is a good candidate for a loan much faster and cheaper.</p>
+                    
+                    <h2>2. Literature Review</h2>
+                    <h3>2.1. Tech and Growth</h3>
+                    <p>Most global reports suggest AI will add trillions to the economy by 2030. In places like Africa, people often talk about AI as a way to "leapfrog" older technologies. But when you look at the Oxford Insights AI Readiness Index, the reality is a bit more sobering. While the tech scene in Lagos is booming, Nigeria still struggles with basics like reliable electricity and fast internet outside major cities, which are absolute requirements for running heavy AI models.</p>
+
+                    <h3>2.2. Financial Inclusion</h3>
+                    <p>Groups like EFInA track financial inclusion closely, and their data shows that while things are getting better (thanks to mobile money), rural areas and women are still getting left behind. SMEDAN consistently points out that lack of financing is the number one reason small businesses fail. Traditional banks just aren't built to lend to informal vendors.</p>
+
+                    <h2>3. Methodology</h2>
+                    <p>Since there isn't a massive, neat dataset labeled "AI usage by Nigerian SMEs," we had to use macro-level proxies to test our ideas:</p>
+                    <ul>
+                        <li><strong>Digital Readiness</strong>: We used fixed broadband subscriptions. If you don't have internet, you aren't using cloud AI.</li>
+                        <li><strong>SME Credit Access</strong>: We used the World Bank metric for "Domestic credit to private sector (% of GDP)".</li>
+                        <li><strong>Economic Impact</strong>: Annual GDP growth percentage.</li>
+                    </ul>
+
+                    <h2>4. Results and Discussion</h2>
+                    <h3>4.1. Better Internet = More Credit</h3>
+                    <p>Our correlation matrix showed a positive link (0.37) between broadband subscriptions and credit to the private sector. This makes sense. As the country's digital backbone gets stronger, it paves the way for FinTechs to run the AI algorithms needed to score and lend to people who were previously off the grid. Basically, better tech infrastructure seems to open up the lending taps.</p>
+
+                    <h3>4.2. The GDP Disconnect</h3>
+                    <p>On the flip side, we saw a slight negative correlation (-0.13) between digital readiness and short-term GDP growth. This might sound weird at first, but Nigeria's GDP is famously tied to global oil prices. A dip in oil can tank the GDP even if the tech sector is doing great. Also, digital upgrades usually take a few years to actually show up in national productivity numbers.</p>
+
+                    <h2>5. Conclusion and Policy Ideas</h2>
+                    <p>AI, especially algorithmic credit scoring, is a real chance to fix Nigeria's SME lending problem. Our data points to a clear link: when you improve digital infrastructure, private sector credit goes up. But it's not going to fix the whole economy overnight.</p>
+                    <p>Based on what we found, here's what should happen next:</p>
+                    <ol>
+                        <li><strong>Focus on the Basics</strong>: The government needs to push broadband outside of just Lagos and Abuja. You can't have an AI revolution on 2G networks.</li>
+                        <li><strong>Regulatory Sandboxes</strong>: The Central Bank of Nigeria needs to give FinTechs a safe space to test these AI lending models so they can innovate without breaking banking laws.</li>
+                        <li><strong>Watch Out for Bias</strong>: Algorithms can be biased. We need local rules to make sure AI doesn't end up discriminating against rural farmers or women who might not have a massive digital footprint.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SLIDES VIEW ==================== -->
+        <div id="slides-view" class="view">
+            <div class="container">
+                <button class="back-link" onclick="switchView('home')" style="margin-top: 2rem;">&larr; Back to Overview</button>
+                
+                <div class="slide-container">
+                    <!-- Slide 1 -->
+                    <div class="slide glass-panel fade-up">
+                        <h1 class="text-center doc-title" style="margin-bottom: 1rem;">The Impact of AI on Economic Growth & Financial Inclusion in Nigeria</h1>
+                        <p class="text-center" style="font-size: 1.25rem; color: var(--accent-color);">A Macro-Level Analysis of Digital Readiness and SME Credit Access</p>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slide glass-panel fade-up delay-1">
+                        <h2 class="slide-title">The Core Problem</h2>
+                        <ul class="slide-list">
+                            <li><strong>SMEs Drive the Economy</strong>: SMEs account for ~50% of Nigeria's GDP and over 80% of employment.</li>
+                            <li><strong>The Credit Gap</strong>: Access to finance is the #1 obstacle for SME growth (SMEDAN).</li>
+                            <li><strong>The Traditional Barrier</strong>: Lack of collateral and formal credit history leaves millions "invisible" to traditional banks.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide glass-panel fade-up">
+                        <h2 class="slide-title">The AI Opportunity</h2>
+                        <ul class="slide-list">
+                            <li><strong>Alternative Credit Scoring</strong>: Machine learning can use non-traditional data (mobile usage, utility payments) to assess credit risk.</li>
+                            <li><strong>The Prerequisite</strong>: Successful AI deployment requires robust digital readiness and foundational infrastructure (e.g., broadband).</li>
+                        </ul>
+                        <div class="highlight-box">
+                            Question: Does an improvement in digital readiness actually correlate with better SME credit access in Nigeria?
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="slide glass-panel fade-up">
+                        <h2 class="slide-title">Key Findings: The Data Speaks</h2>
+                        <div class="grid-2" style="align-items: center;">
+                            <div>
+                                <h3 style="color: var(--text-primary); font-family: 'Outfit', sans-serif;">Digital Infrastructure Drives Inclusion</h3>
+                                <ul class="slide-list">
+                                    <li>A <strong>moderate positive correlation (0.37)</strong> exists between broadband adoption and private sector credit access.</li>
+                                    <li><strong>Takeaway</strong>: Better tech foundations allow financial systems to serve more SMEs.</li>
+                                </ul>
+                            </div>
+                            <div style="text-align: center;">
+                                <img src="assets/correlation_heatmap.png" alt="Correlation Heatmap" style="max-width: 100%; border-radius: 8px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="slide glass-panel fade-up">
+                        <h2 class="slide-title">Policy Recommendations</h2>
+                        <ol class="slide-list">
+                            <li><strong>Accelerate Foundational Infrastructure</strong>: Expand broadband beyond Lagos and Abuja to ensure equitable AI access.</li>
+                            <li><strong>Promote AI in FinTech</strong>: The CBN should create "sandbox" environments for FinTechs utilizing AI for alternative credit scoring.</li>
+                            <li><strong>Develop Ethical AI Frameworks</strong>: Implement localized guidelines to prevent algorithmic bias against rural or marginalized populations.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 AI & Economics Research Lab. Powered by Open Data.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
