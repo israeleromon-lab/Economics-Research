@@ -1,23 +1,3 @@
-// --- View Switcher Logic ---
-function switchView(viewId) {
-    // Hide all views
-    const views = document.querySelectorAll('.view');
-    views.forEach(view => {
-        view.classList.remove('active');
-    });
-
-    // Show the target view
-    const targetView = document.getElementById(viewId + '-view');
-    if (targetView) {
-        targetView.classList.add('active');
-        // Scroll to top instantly
-        window.scrollTo(0, 0);
-        
-        // Re-trigger scroll animations for the new view
-        setTimeout(handleScrollAnimations, 100);
-    }
-}
-
 // --- Scroll Reveal Animations ---
 function handleScrollAnimations() {
     const scrollElements = document.querySelectorAll('.scroll-element');
@@ -25,6 +5,7 @@ function handleScrollAnimations() {
     scrollElements.forEach(el => {
         const elementTop = el.getBoundingClientRect().top;
         const elementBottom = el.getBoundingClientRect().bottom;
+        // Triggers slightly earlier to make it feel smoother
         const isVisible = (elementTop < window.innerHeight - 50) && (elementBottom > 0);
         
         if (isVisible) {
@@ -41,4 +22,26 @@ document.addEventListener('DOMContentLoaded', () => {
 // Check on scroll
 window.addEventListener('scroll', () => {
     requestAnimationFrame(handleScrollAnimations);
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            // Account for fixed navbar
+            const headerOffset = 100;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        }
+    });
 });

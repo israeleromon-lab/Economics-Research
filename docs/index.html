@@ -8,39 +8,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo" onclick="switchView('home')">AI & Econ.</div>
+            <div class="logo">AI & Econ.</div>
             <div class="nav-links">
-                <a href="#" onclick="switchView('home')">Overview</a>
-                <a href="#" onclick="switchView('paper')">Full Paper</a>
-                <a href="#" onclick="switchView('slides')">Slide Deck</a>
+                <a href="#overview">Overview</a>
+                <a href="#paper">Full Paper</a>
+                <a href="#slides">Slide Deck</a>
             </div>
         </div>
     </nav>
 
-    <!-- VIEWS CONTAINER -->
-    <main id="app-container">
+    <main id="app-container" style="padding-top: 6rem;">
 
         <!-- ==================== HOME VIEW ==================== -->
-        <div id="home-view" class="view active">
+        <div id="overview">
             <header class="hero">
                 <div class="glow-orb orb-1"></div>
                 <div class="glow-orb orb-2"></div>
                 <div class="container hero-content">
                     <h1 class="fade-up">The Impact of AI on Economic Growth & Financial Inclusion in Nigeria</h1>
                     <p class="subtitle fade-up delay-1">Looking at how digital infrastructure actually affects SME lending and the broader economy.</p>
-                    <div class="hero-actions fade-up delay-2">
-                        <button class="btn btn-primary" onclick="switchView('paper')">Read the Full Paper</button>
-                        <button class="btn btn-secondary" onclick="switchView('slides')">View the Slide Deck</button>
-                    </div>
                     
-                    <div class="hero-image-wrapper fade-up delay-3">
+                    <div class="hero-image-wrapper fade-up delay-2">
                         <div class="glass-panel">
                             <img src="assets/ai_economics_hero.png" alt="Abstract AI and Economics Visualization">
                         </div>
@@ -48,7 +43,7 @@
                 </div>
             </header>
 
-            <section class="overview">
+            <section class="overview" style="margin-bottom: 6rem;">
                 <div class="container">
                     <div class="grid-2">
                         <div class="fade-in scroll-element">
@@ -78,15 +73,14 @@
             </section>
         </div>
 
-        <!-- ==================== PAPER VIEW ==================== -->
-        <div id="paper-view" class="view">
-            <div class="container">
-                <div class="document-container fade-up">
-                    <button class="back-link" onclick="switchView('home')">&larr; Back to Overview</button>
-                    
-                    <h1 class="doc-title">AI and Economic Growth in Nigeria: An Empirical Look at SME Credit</h1>
+        <hr style="border-color: var(--glass-border); opacity: 0.5; margin: 0;">
 
-                    <h2>1. Introduction</h2>
+        <!-- ==================== PAPER VIEW ==================== -->
+        <div id="paper" style="padding: 6rem 0; background: rgba(15, 23, 42, 0.3);">
+            <div class="container">
+                <div class="document-container scroll-element">
+                    <h1 class="doc-title text-center" style="margin-bottom: 4rem;">Research Paper</h1>
+                    <h2 style="margin-top: 0;">1. Introduction</h2>
                     <p>Nigeria is Africa's largest economy, but despite the top-line GDP growth over the last twenty years, getting that wealth to actually spread around is still a huge problem. A massive chunk of the adult population doesn't use formal banking. Small and Medium Enterprises (SMEs) are the backbone of the economy—making up over 80% of jobs and about half the GDP—yet they struggle constantly to get loans. Banks usually blame this on high costs and the fact that most of these small businesses don't have collateral or a formal credit history.</p>
                     <p>Lately, Artificial Intelligence (AI) and machine learning are starting to change how this works. Instead of needing a traditional credit score, FinTech companies are using AI models to look at alternative data: things like mobile phone top-ups, utility bills, and digital payment histories. This lets them figure out if someone is a good candidate for a loan much faster and cheaper.</p>
                     
@@ -124,20 +118,21 @@
             </div>
         </div>
 
+        <hr style="border-color: var(--glass-border); opacity: 0.5; margin: 0;">
+
         <!-- ==================== SLIDES VIEW ==================== -->
-        <div id="slides-view" class="view">
+        <div id="slides" style="padding: 6rem 0;">
             <div class="container">
-                <button class="back-link" onclick="switchView('home')" style="margin-top: 2rem;">&larr; Back to Overview</button>
-                
+                <h1 class="doc-title text-center scroll-element" style="margin-bottom: 4rem;">Presentation Deck</h1>
                 <div class="slide-container">
                     <!-- Slide 1 -->
-                    <div class="slide glass-panel fade-up">
+                    <div class="slide glass-panel scroll-element">
                         <h1 class="text-center doc-title" style="margin-bottom: 1rem;">The Impact of AI on Economic Growth & Financial Inclusion in Nigeria</h1>
                         <p class="text-center" style="font-size: 1.25rem; color: var(--accent-color);">A Macro-Level Analysis of Digital Readiness and SME Credit Access</p>
                     </div>
 
                     <!-- Slide 2 -->
-                    <div class="slide glass-panel fade-up delay-1">
+                    <div class="slide glass-panel scroll-element">
                         <h2 class="slide-title">The Core Problem</h2>
                         <ul class="slide-list">
                             <li><strong>SMEs Drive the Economy</strong>: SMEs account for ~50% of Nigeria's GDP and over 80% of employment.</li>
@@ -147,7 +142,7 @@
                     </div>
 
                     <!-- Slide 3 -->
-                    <div class="slide glass-panel fade-up">
+                    <div class="slide glass-panel scroll-element">
                         <h2 class="slide-title">The AI Opportunity</h2>
                         <ul class="slide-list">
                             <li><strong>Alternative Credit Scoring</strong>: Machine learning can use non-traditional data (mobile usage, utility payments) to assess credit risk.</li>
@@ -159,7 +154,7 @@
                     </div>
 
                     <!-- Slide 4 -->
-                    <div class="slide glass-panel fade-up">
+                    <div class="slide glass-panel scroll-element">
                         <h2 class="slide-title">Key Findings: The Data Speaks</h2>
                         <div class="grid-2" style="align-items: center;">
                             <div>
@@ -176,7 +171,7 @@
                     </div>
 
                     <!-- Slide 5 -->
-                    <div class="slide glass-panel fade-up">
+                    <div class="slide glass-panel scroll-element">
                         <h2 class="slide-title">Policy Recommendations</h2>
                         <ol class="slide-list">
                             <li><strong>Accelerate Foundational Infrastructure</strong>: Expand broadband beyond Lagos and Abuja to ensure equitable AI access.</li>
@@ -196,6 +191,6 @@
         </div>
     </footer>
 
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
 </body>
 </html>
